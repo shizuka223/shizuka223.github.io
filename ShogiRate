@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>将棋部レート</title>
+    <script type="text/javascript">
+      alert("読み込みました");
+      var members = {志門:1000, 俊輔:1000, 高木:1000, 小松:1000, 熊谷:1000, 住石:1000, 福島:1000, 平山:1000, 富永:1000, 阿部:1000, 高田:1000, 保坂:1000, 的場:1000, 岩田:1000, 竹内:1000, 吉川:1000, 木藤:1000, 南谷:1000, 宮本:1000, 泉川:1000};
+      function calculate() {
+        alert("ボタンが押されました");
+        var Wname = prompt('勝者の名前');
+        var Lname = prompt('敗者の名前');
+        var Wrate = members[Wname];
+        var Lrate = members[Lname];
+        if (Wrate >= Lrate) {
+          var dif = Math.round(15 - (Wrate - Lrate) / 20);
+        }else if(Wrate < Lrate) {
+          var dif = Math.round(15 + (Wrate - Lrate) / 20);
+        };
+        members[Wname] = Wrate + dif;
+        members[Lname] = Lrate - dif;
+        console.log(Wrate)
+      }
+    </script>
+  </head>
+  <body>
+    <h1>THshogi System</h1>
+    <main>
+      <h2>～MENU～</h2>
+    </main>
+    <input type="button" value="レート計算" onclick="calculate();">
+  </body>
+</html>
