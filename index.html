@@ -8,8 +8,8 @@
       alert("読み込みました");
       var members = {志門:1000, 俊輔:1000, 小松:1000, 熊谷:1000, 住石:1000, 福島:1000, 平山:1000, 富永:1000, 阿部:1000, 高田:1000, 保坂:1000, 的場:1000, 岩田:1000, 吉川:1000, 木藤:1000, 南谷:1000, 宮本:1000, 泉川:1000};
       function WLname(Winfo,Linfo) {
-        alert('勝者のレートは' + members[Winfo])
-        alert('敗者のレートは' + members[Linfo])
+        alert('勝者のレートは' + members[Winfo]);
+        alert('敗者のレートは' + members[Linfo]);
       }
       function calculate() {
         alert("ボタンが押されました");
@@ -18,12 +18,12 @@
         var Wrate = members[Wname];
         var Lrate = members[Lname];
         var dif = Math.round(15 - (Wrate - Lrate) / 20);
-        console.log(dif)
+        console.log(dif);
         members[String(Wname)] = Wrate + dif;
-        console.log(members[Wname])
+        console.log(members[Wname]);
         members[String(Lname)] = Lrate - dif;
-        console.log(members)
-        WLname(Wname,Lname)
+        console.log(members);
+        WLname(Wname,Lname);
       }
     </script>
   </head>
